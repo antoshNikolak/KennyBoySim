@@ -16,4 +16,9 @@ public class Entity {
 
     }
 
+    private void ok(){
+        System.out.println("ok");
+
+    }
+
 }
