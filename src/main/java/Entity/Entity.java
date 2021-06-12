@@ -11,5 +11,9 @@ public class Entity {
 
         }
     }
+    public void another(){
+        System.out.println("hey bud");
+
+    }
 
 }
