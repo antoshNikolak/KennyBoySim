@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+
+            prefHeight="600" prefWidth="800.0">
+
+    <children>
+        <Button layoutX="319.0" layoutY="81.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="162.0" text="Play" />
+        <Button layoutX="319.0" layoutY="314.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="162.0" text="Quit" />
+    </children>
+
+</Pane>
