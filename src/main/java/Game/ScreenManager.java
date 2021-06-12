@@ -1,5 +1,6 @@
 package Game;
 
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -8,7 +9,7 @@ import java.util.HashMap;
 
 public class ScreenManager {
 
-    private static HashMap<String, Pane> screenMap = new HashMap<>();
+    private final static HashMap<String, Pane> screenMap = new HashMap<>();
     private static String currentPage;
 
     private static Stage stage;
@@ -18,25 +19,32 @@ public class ScreenManager {
 
     public static void activate(String name) {
         Pane pane = screenMap.get(name);
-//        main.setRoot(pane);
+        scene.setRoot(pane);
+        currentPage = name;
+
 //        stage.setHeight(pane.getPrefHeight());
 //        stage.setWidth(pane.getPrefWidth());
 //
-//        currentPage = name;
     }
 
     public static void init(Stage _stage){
-        System.out.println(screenMap.size());
         stage = _stage;
-        Scene scene = new Scene(screenMap.get("menu"));
+        scene = new Scene(screenMap.get("menu"));
         stage.setScene(scene);
         stage.show();
-
-
-
     }
 
-    public static void addScreen(String name, Pane pane) {
-        screenMap.put(name, pane);
+    public static void addScreen(String pageName, Pane pane) {
+        screenMap.put(pageName, pane);
     }
+
+    public static Pane getScreen(String name){
+        return screenMap.get(name);
+    }
+
+    public static Node getNode(String pageName, String nodeName){
+        return screenMap.get(pageName).lookup("#"+ nodeName);
+    }
+
+
 }

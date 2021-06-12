@@ -8,6 +8,8 @@ import java.io.IOException;
 
 public class App extends Application {
 
+    public static Game game;
+
     public static void main(String[] args) {
         launch(args);
     }

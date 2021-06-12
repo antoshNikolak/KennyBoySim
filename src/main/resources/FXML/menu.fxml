@@ -8,11 +8,11 @@
 
 <Pane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-
+      fx:controller="Controller.GameController"
             prefHeight="600" prefWidth="800.0">
 
     <children>
-        <Button layoutX="319.0" layoutY="81.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="162.0" text="Play" />
+        <Button onMouseClicked="#startGame" layoutX="319.0" layoutY="81.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="162.0" text="Play" />
         <Button layoutX="319.0" layoutY="314.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="162.0" text="Quit" />
     </children>
 
