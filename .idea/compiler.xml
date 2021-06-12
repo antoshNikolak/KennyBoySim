@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="KennyBoySim" />
         <module name="TestForSamKennyBoySim" />
+        <module name="KennyBoySim" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="KennyBoySim" target="11" />
       <module name="TestForSamKennyBoySim" target="11" />
     </bytecodeTargetLevel>
   </component>
