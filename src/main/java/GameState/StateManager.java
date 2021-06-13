@@ -11,10 +11,8 @@ public class StateManager {
 
     }
 
-
-
-    public void updateTop(){
-        states.getLast().handleGame();
+    public void updateCurrentState(double delta){
+        states.getLast().handleGame(delta);
     }
 
 //    public void update(){
@@ -39,7 +37,7 @@ public class StateManager {
         states.removeLast();
     }
 
-    public BaseState getCurrentState(){
-        return states.getLast();
-    }
+//    public BaseState getCurrentState(){
+//        return states.getLast();
+//    }
 }
