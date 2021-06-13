@@ -11,6 +11,7 @@ public class Game {
     private StateManager stateManager = new StateManager();
 
     public Game() {
+        System.out.println("game");
 
     }
 
