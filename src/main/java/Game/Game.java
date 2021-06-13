@@ -1,12 +1,16 @@
 package Game;
 
+import GameState.StateManager;
 import javafx.animation.AnimationTimer;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 
 public class Game {
 
+    private StateManager stateManager = new StateManager();
+
     public Game() {
+
     }
 
     public void start(){
@@ -30,15 +34,10 @@ public class Game {
 
     }
 
-//    private void render(){
-//
-//    }
 
     private void init(){
-//        addSystems();
+        this.stateManager.getCurrentState().handleGame();
+
     }
 
-//    private void addSystems(){
-//
-//    }
 }

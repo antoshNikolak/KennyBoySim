@@ -7,14 +7,8 @@ import java.util.HashMap;
 
 public class TextureManager {
     private HashMap<String, Image> images = new HashMap<>();
-    private GraphicsContext gc;
-
-    public TextureManager(GraphicsContext gc) {
-        this.gc = gc;
-    }
 
 
-    public GraphicsContext getGc() {
-        return gc;
-    }
+
+
 }
