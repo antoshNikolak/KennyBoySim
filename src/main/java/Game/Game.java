@@ -11,7 +11,7 @@ public class Game {
     private StateManager stateManager = new StateManager();
 
     public Game() {
-        System.out.println("game");
+
 
     }
 
@@ -19,7 +19,6 @@ public class Game {
         init();
         Canvas canvas = (Canvas) ScreenManager.getNode("game", "GameCanvas");
         GraphicsContext gc = canvas.getGraphicsContext2D();
-
 
         new AnimationTimer() {
             long then = System.nanoTime();
