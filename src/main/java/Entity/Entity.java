@@ -9,6 +9,7 @@ public abstract class Entity {
     private final Map<Class<? extends Component>, Component> components =  new HashMap<>();
 
     protected Entity(){
+        System.out.println("en");
         //add to list of entities probably
     }
 
