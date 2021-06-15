@@ -1,5 +1,8 @@
 package System;
 
+import Component.PositionComponent;
+import Entity.Entity;
+
 public class PhysicsSystem extends BaseSystem {
     private double delta;
 
@@ -8,10 +11,8 @@ public class PhysicsSystem extends BaseSystem {
     }
 
 
-
     @Override
     public void executeTask(double delta) {
-//        double delta = (double) (now - then) / 1000000000f;
 
     }
 
