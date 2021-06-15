@@ -16,9 +16,7 @@ public class StateManager {
         states.getLast().update(delta);
     }
 
-    public void renderCurrentState(GraphicsContext gc){
-        states.getLast().render(gc);
-    }
+
 
 //    public void update(){
 //        ListIterator<BaseState> stateItr = states.listIterator(states.size());
