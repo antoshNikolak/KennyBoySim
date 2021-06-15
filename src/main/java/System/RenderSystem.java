@@ -1,7 +1,11 @@
 package System;
 
+import javafx.scene.canvas.GraphicsContext;
+
 public class RenderSystem extends BaseSystem{
-    public RenderSystem() {
+    GraphicsContext gc;
+    public RenderSystem(GraphicsContext gc) {
+        this.gc = gc;
     }
 
     @Override

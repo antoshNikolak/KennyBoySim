@@ -1,7 +1,8 @@
 package GameState;
 
+import javafx.scene.canvas.GraphicsContext;
+
 import java.util.LinkedList;
-import java.util.ListIterator;
 
 public class StateManager {
 
@@ -12,7 +13,11 @@ public class StateManager {
     }
 
     public void updateCurrentState(double delta){
-        states.getLast().handleGame(delta);
+        states.getLast().update(delta);
+    }
+
+    public void renderCurrentState(GraphicsContext gc){
+        states.getLast().render(gc);
     }
 
 //    public void update(){

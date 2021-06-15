@@ -14,7 +14,7 @@ public abstract class Entity {
 
     public void addComponent(Component component){
         components.put(component.getClass(), component);
-//            component.setEntity(this);
+        component.setEntity(this);
 
     }
 
