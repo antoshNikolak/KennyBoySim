@@ -23,6 +23,7 @@ public class App extends Application {
 //        ScreenManager.setRootScene(scene);
 //        ScreenManager.setStage(stage);
 //        setUpScreenManager();
+        System.out.println("hey bud");
 
     }
 
@@ -49,4 +50,5 @@ public class App extends Application {
 
 
     }
+
 }

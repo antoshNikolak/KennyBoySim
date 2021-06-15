@@ -8,10 +8,8 @@ public class PhysicsSystem extends BaseSystem {
     }
 
 
-
     @Override
     public void executeTask(double delta) {
-//        double delta = (double) (now - then) / 1000000000f;
 
     }
 
