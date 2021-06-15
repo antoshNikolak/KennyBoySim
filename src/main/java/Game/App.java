@@ -43,7 +43,9 @@ public class App extends Application {
         ClassLoader classLoader= Thread.currentThread().getContextClassLoader();
 //                FXMLLoader loader = new FXMLLoader();
 //                loader.setLocation(getClass().getResource("/fxml/game.fxml"));
-        ScreenManager.addScreen(pageName, new FXMLLoader().load(classLoader.getResourceAsStream("FXML/"+ pageName+ ".fxml")));
+        ScreenManager.addScreen(pageName, new FXMLLoader().load(classLoader.getResourceAsStream("Game/" + pageName+ ".fxml")));
+
+
 
 
     }

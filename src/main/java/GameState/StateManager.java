@@ -9,7 +9,6 @@ public class StateManager {
     private LinkedList<BaseState> states = new LinkedList<>();
 
     public StateManager() {
-
     }
 
     public void updateCurrentState(double delta){
