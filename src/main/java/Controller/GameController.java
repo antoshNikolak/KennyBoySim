@@ -8,12 +8,12 @@ import javafx.scene.input.MouseEvent;
 
 public class GameController {
 
-    @FXML
-    public void startGame(MouseEvent mouseEvent) {
-        ScreenManager.activate("game");
-        App.game = new Game();
-        App.game.handleLogin();
-        App.game.start();
-    }
+//    @FXML
+//    public void startGame(MouseEvent mouseEvent) {
+//        ScreenManager.activate("game");
+//        App.game = new Game();
+//        App.game.handleLogin();
+//        App.game.start();
+//    }
 
 }

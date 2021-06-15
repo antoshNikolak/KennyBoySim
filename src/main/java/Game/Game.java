@@ -40,7 +40,12 @@ public class Game {
     }
 
     private void init(){
-        this.stateManager.pushState(new TravelState());
+        TravelState travelState = new TravelState();
+        this.stateManager.pushState(travelState);
+        travelState.init();
     }
 
+    public StateManager getStateManager() {
+        return stateManager;
+    }
 }

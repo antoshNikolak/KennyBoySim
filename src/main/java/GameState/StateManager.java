@@ -39,7 +39,7 @@ public class StateManager {
         states.removeLast();
     }
 
-//    public BaseState getCurrentState(){
-//        return states.getLast();
-//    }
+    public BaseState getCurrentState(){
+        return states.getLast();
+    }
 }

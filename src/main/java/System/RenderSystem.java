@@ -1,15 +1,37 @@
 package System;
 
+import Component.PositionComponent;
+import Component.TextureComponent;
+import Entity.Entity;
+import Game.App;
+import GameState.BaseState;
 import javafx.scene.canvas.GraphicsContext;
 
-public class RenderSystem extends BaseSystem{
+import java.util.List;
+
+public class RenderSystem extends BaseSystem {
     GraphicsContext gc;
+
     public RenderSystem(GraphicsContext gc) {
         this.gc = gc;
     }
 
     @Override
-    public void executeTask(double delta) {
+    public void executeTask(double delta) {//todo if every system could have its own thread maybe
+        new Thread(() -> {
+            List<Entity> filteredEntities = filterEntitiesForCurrentState( TextureComponent.class, PositionComponent.class);
+            for (Entity entity : filteredEntities) {
+                drawEntity(entity);
+            }
+        }).start();
+
+
+    }
+
+    private void drawEntity(Entity entity) {
+        TextureComponent textureComponent = entity.getComponent(TextureComponent.class);
+        PositionComponent positionComponent = entity.getComponent(PositionComponent.class);
+        gc.drawImage(textureComponent.getImage(), positionComponent.getX(), positionComponent.getY(), textureComponent.getWidth(), textureComponent.getHeight());
 
     }
 }

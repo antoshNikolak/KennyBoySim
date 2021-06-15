@@ -17,13 +17,8 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         loadAllPages();
+        TextureManager.init();
         ScreenManager.init(stage);
-//        Pane root = new Pane();/ /empty Pane for the scene
-//        Scene scene = new Scene(root);
-//        ScreenManager.setRootScene(scene);
-//        ScreenManager.setStage(stage);
-//        setUpScreenManager();
-        System.out.println("hey bud");
 
     }
 

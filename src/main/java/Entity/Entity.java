@@ -4,13 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 import Component.*;
+import Game.App;
 
 public abstract class Entity {
     private final Map<Class<? extends Component>, Component> components =  new HashMap<>();
 
     protected Entity(){
-        System.out.println("en");
-        //add to list of entities probably
+        App.game.getStateManager().getCurrentState().getEntities().add(this);
     }
 
     public void addComponent(Component component){
