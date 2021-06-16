@@ -8,6 +8,22 @@ public class PositionComponent extends Component {
         this.y = y;
     }
 
+    public void incrementX(double velX){
+        this.x+= velX;
+    }
+
+    public void incrementY(double velY){
+        this.y+= velY;
+    }
+
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
     public double getX() {
         return x;
     }
@@ -15,4 +31,6 @@ public class PositionComponent extends Component {
     public double getY() {
         return y;
     }
+
+
 }

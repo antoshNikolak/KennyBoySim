@@ -46,5 +46,7 @@ public class ScreenManager {
         return screenMap.get(pageName).lookup("#"+ nodeName);
     }
 
-
+    public static Scene getScene() {
+        return scene;
+    }
 }

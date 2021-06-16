@@ -18,12 +18,13 @@ public class RenderSystem extends BaseSystem {
 
     @Override
     public void executeTask(double delta) {//todo if every system could have its own thread maybe
-        new Thread(() -> {
+//        new Thread(() -> {
+        gc.clearRect(0, 0, 600, 800);
             List<Entity> filteredEntities = filterEntitiesForCurrentState( TextureComponent.class, PositionComponent.class);
             for (Entity entity : filteredEntities) {
                 drawEntity(entity);
             }
-        }).start();
+//        }).start();
 
 
     }

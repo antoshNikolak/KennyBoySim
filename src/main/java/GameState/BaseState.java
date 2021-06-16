@@ -7,26 +7,28 @@ import java.util.Map;
 
 import Entity.*;
 import System.*;
+import World.World;
 import javafx.scene.canvas.GraphicsContext;
 
 public abstract class BaseState {
 
     private Map<Class<? extends BaseSystem>, BaseSystem> systems = new HashMap<>();
     private List<Entity> entities = new ArrayList<>();
+    protected World world;
 
-    private KennyBoi kennyBoi;
+//    private KennyBoi kennyBoi;
 
-
+    public BaseState() {
+    }
 
     public void update(double delta){
-//        getSystem(PhysicsSystem.class).setDelta(delta);//todo set delta of just physics system or pass into each system
         for (BaseSystem system: systems.values()){
             system.executeTask(delta);
         }
     }
 
     protected void loadKennyBoi(){
-        this.kennyBoi = new KennyBoi();
+        this.entities.add(new KennyBoi());
     }
 
     public void init(){
@@ -35,6 +37,7 @@ public abstract class BaseState {
 
 
     protected abstract void initialiseSystems();
+    protected abstract void initialiseWorld();
 //    protected abstract void init();
 
     public void addSystem(BaseSystem system){

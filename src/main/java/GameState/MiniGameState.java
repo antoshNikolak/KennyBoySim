@@ -4,8 +4,15 @@ public class MiniGameState extends BaseState{
 
 
 
+
+
     @Override
     protected void initialiseSystems() {
+
+    }
+
+    @Override
+    protected void initialiseWorld() {
 
     }
 }

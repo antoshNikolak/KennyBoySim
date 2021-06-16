@@ -19,6 +19,8 @@ public class App extends Application {
         loadAllPages();
         TextureManager.init();
         ScreenManager.init(stage);
+        KeyManager.init();
+
 
     }
 
