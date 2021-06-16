@@ -4,6 +4,8 @@ import Component.PositionComponent;
 import Component.TextureComponent;
 import Entity.Entity;
 import Game.App;
+import Game.ScreenManager;
+import Game.TextureManager;
 import GameState.BaseState;
 import javafx.scene.canvas.GraphicsContext;
 
@@ -19,11 +21,11 @@ public class RenderSystem extends BaseSystem {
     @Override
     public void executeTask(double delta) {//todo if every system could have its own thread maybe
 //        new Thread(() -> {
-        gc.clearRect(0, 0, 600, 800);
-            List<Entity> filteredEntities = filterEntitiesForCurrentState( TextureComponent.class, PositionComponent.class);
-            for (Entity entity : filteredEntities) {
-                drawEntity(entity);
-            }
+        gc.clearRect(0, 0, ScreenManager.getScene().getWidth(), ScreenManager.getScene().getHeight());
+        List<Entity> filteredEntities = filterEntitiesForCurrentState(TextureComponent.class, PositionComponent.class);
+        for (Entity entity : filteredEntities) {
+            drawEntity(entity);
+        }
 //        }).start();
 
 

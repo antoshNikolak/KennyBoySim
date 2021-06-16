@@ -29,7 +29,10 @@ public class ScreenManager {
 
     public static void init(Stage _stage){
         stage = _stage;
-        scene = new Scene(screenMap.get("menu"));
+        Pane pane = screenMap.get("menu");
+        System.out.println(pane.getWidth());
+        System.out.println(pane.getPrefWidth());
+        scene = new Scene(pane);
         stage.setScene(scene);
         stage.show();
     }

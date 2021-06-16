@@ -26,12 +26,11 @@ public class KeyManager {
             }
 
         });
+
         ScreenManager.getScene().setOnKeyReleased(event -> {
             KeyCode keyCode = event.getCode();
             if (keyCode == KeyCode.A) {
                 leftKeyPressed = false;
-
-
             }
             if (keyCode == KeyCode.D) {
                 rightKeyPressed = false;
