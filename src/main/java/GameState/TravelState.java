@@ -1,4 +1,5 @@
 package GameState;
+import Game.App;
 import Game.ScreenManager;
 import System.*;
 import World.World;
@@ -8,6 +9,12 @@ import javafx.scene.canvas.GraphicsContext;
 public class TravelState extends BaseState{
 
 
+    @Override
+    public void init() {
+        loadKennyBoi();
+        initialiseWorld();
+        initialiseSystems();
+    }
 
     @Override
     protected void initialiseSystems() {
@@ -25,7 +32,11 @@ public class TravelState extends BaseState{
     }
 
     public TravelState() {
-        initialiseWorld();
-        initialiseSystems();
+        App.game.getStateManager().pushState(this);
     }
+
+    //    public TravelState() {
+//        initialiseWorld();
+//        initialiseSystems();
+//    }
 }

@@ -14,6 +14,7 @@ public abstract class BaseState {
 
     private Map<Class<? extends BaseSystem>, BaseSystem> systems = new HashMap<>();
     private List<Entity> entities = new ArrayList<>();
+    private KennyBoi kennyBoi;
     protected World world;
 
 //    private KennyBoi kennyBoi;
@@ -28,14 +29,15 @@ public abstract class BaseState {
     }
 
     protected void loadKennyBoi(){
-        this.entities.add(new KennyBoi());
+        this.kennyBoi = new KennyBoi();
+        this.entities.add(kennyBoi);
     }
 
-    public void init(){
-        loadKennyBoi();
-    }
+//    public void init(){
+//        loadKennyBoi();
+//    }
 
-
+    public abstract void init();
     protected abstract void initialiseSystems();
     protected abstract void initialiseWorld();
 //    protected abstract void init();
@@ -55,5 +57,9 @@ public abstract class BaseState {
 
     public List<Entity> getEntities() {
         return entities;
+    }
+
+    public KennyBoi getKennyBoi() {
+        return kennyBoi;
     }
 }

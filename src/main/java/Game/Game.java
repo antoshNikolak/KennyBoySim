@@ -41,8 +41,10 @@ public class Game {
 
     private void init(){
         TravelState travelState = new TravelState();
-        this.stateManager.pushState(travelState);
         travelState.init();
+
+//        this.stateManager.pushState(travelState);
+
     }
 
     public StateManager getStateManager() {

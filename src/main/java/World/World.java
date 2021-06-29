@@ -27,8 +27,21 @@ public class World {
 //                int id  = Integer.parseInt(tokens[(x + y * width + 2)]);
 //                String texture = "";
 //                if (id == 1) {
-//                    texture = "brown_block";
-//                } else if (id != 0) {
+//                    texture = "road_block";
+//                }
+//                else if(id == 2){
+//                    texture = "pavement_block_right";
+//                }
+//                else if(id == 3){
+//                    texture = "pavement_block_down";
+//                }
+//                else if(id == 4){
+//                    texture = "pavement_block_left";
+//                }
+//                else if(id == 5){
+//                    texture = "pavement_block_up";
+//                }
+//                else if (id != 0) {
 //                    System.out.println("Tile not found");
 //                }
 //

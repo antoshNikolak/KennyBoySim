@@ -33,6 +33,7 @@ public class StateManager {
 
     public void pushState(BaseState state){
         states.add(state);
+        System.out.println("adding state");
     }
 
     public void popState(){

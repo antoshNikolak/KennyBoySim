@@ -8,14 +8,22 @@ import Game.ScreenManager;
 import Game.TextureManager;
 import GameState.BaseState;
 import javafx.scene.canvas.GraphicsContext;
+import Camera.*;
+import Entity.*;
 
 import java.util.List;
 
 public class RenderSystem extends BaseSystem {
-    GraphicsContext gc;
+    private GraphicsContext gc;
+    private Camera camera;
+    //todo can we have kenny boi as a global field, eventhough we already have him
 
     public RenderSystem(GraphicsContext gc) {
         this.gc = gc;
+        KennyBoi kennyBoi = App.game.getStateManager().getCurrentState().getKennyBoi();
+        PositionComponent position = kennyBoi.getComponent(PositionComponent.class);
+        this.camera = new Camera(position.getX(), position.getY());
+
     }
 
     @Override
@@ -26,9 +34,8 @@ public class RenderSystem extends BaseSystem {
         for (Entity entity : filteredEntities) {
             drawEntity(entity);
         }
+        this.camera.centreOnEntity(App.game.getStateManager().getCurrentState().getKennyBoi());
 //        }).start();
-
-
     }
 
     private void drawEntity(Entity entity) {
